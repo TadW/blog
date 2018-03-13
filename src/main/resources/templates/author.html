@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorator="layout/layout">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="/static/styles.css"/>
+
+    <title>Blog Posts</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+
+
+    <article th:each="author : ${authors }">
+        <header>
+            <p th:text="${ author.firstName}">firstName</p>
+            <p th:text="${author.lastName}">lastName</p>
+            <p th:text="${author.email}">email</p>
+            <td th:text="${post.author.firstName + ' ' + post.author.lastName}">authorxxxx</td>
+
+        </header>
+
+        <article th:each="post : ${posts }">
+            <header>
+                <td th:text="${post.author.firstName + ' ' + post.author.lastName}">author</td>
+                <h3 th:text="${post.title +}">title</h3>
+                Post added: <a th:text="${#calendars.format(post.postedON,'M/dd/yyyy hh:mm')}">postedOn</a>
+            </header>
+            <h1><section th:text="${post.body}">body</section></h1>
+
+    </article>
+
+    </article>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorator="layout/layout">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="/static/styles.css"/>
+    <link rel="stylesheet" href="/static/bootstrap.min.css"/>
+
+    <title>Blog Posts</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+
+    <article>
+        <header>
+            <span class="glyphicon glyphicon-time"></span> <a
+                th:text="${#calendars.format(post.postedON,'dd/MM/yyyy')}">postedOn</a>
+
+            <span class="glyphicon glyphicon-user"></span>
+            <span th:text="${post.author}">author</span>
+
+
+        </header>
+        <h3 th:text="${post.title}">title</h3>
+
+        <section th:text="${post.body}">body</section>
+
+
+        <!-- <address>
+             Author: <a th:href="|mailto:${post.author.email}|"> <span
+                 th:text="|${post.author.firstName} ${post.author.lastName}|">author</span></a>
+         </address> -->
+
+
+    </article>
+
+
+</div>
+</body>
+</html>

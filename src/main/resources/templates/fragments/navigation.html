@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Header</title>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-default" th:fragment="navigation">
+
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbarNavAltMarkup"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">Home</a>
+				<a class="navbar-brand" href="/posts">Blog</a>
+				<a class="navbar-brand" href="/about">About Me</a>
+				<a class="navbar-brand" href="/contact">Contact</a>
+				<a class="navbar-brand" href="/author">Test authors</a>
+
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkupSigns">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a class="nav-item nav-link active" href="/admin/posts">Admin Panel</a></li>
+					<li><a class="nav-item nav-link active" &nbsp;  href="/login">Sign In</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</nav>
+
+</body>
+
+</html>

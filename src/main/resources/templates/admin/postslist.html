@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorator="layout/layout">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="/static/styles.css"/>
+
+    <title>Blog Posts</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+
+
+    <h2>Added Posts</h2>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Posted On</th>
+            <th>View</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="post : ${posts}">
+
+
+            <td th:text="${post.title}">title</td>
+            <td th:text="${post.author}">author</td>
+            <td th:text="${#calendars.format(post.postedON,'dd/MM/yyyy')}">posted on</td>
+            <td><a href="#" th:href="@{/admin/post/} + ${post.id}">View</a></td>
+            <td><a href="#" th:href="@{/admin/postForm/} + ${post.id}">Edit</a></td>
+            <td><a href="#" th:href="@{/admin/post/} + ${post.id}">Delete</a></td>
+
+        </tr>
+
+
+        </tbody>
+    </table>
+
+    <a href="#" th:href="@{/admin/create}">Add New Post</a>
+
+</div>
+</body>
+</html>
