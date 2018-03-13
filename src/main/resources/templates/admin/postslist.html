@@ -34,8 +34,8 @@
             <td th:text="${post.author}">author</td>
             <td th:text="${#calendars.format(post.postedON,'dd/MM/yyyy')}">posted on</td>
             <td><a href="#" th:href="@{/admin/post/} + ${post.id}">View</a></td>
-            <td><a href="#" th:href="@{/admin/postForm/} + ${post.id}">Edit</a></td>
-            <td><a href="#" th:href="@{/admin/post/} + ${post.id}">Delete</a></td>
+            <td><a href="#" th:href="@{/admin/post/edit/} + ${post.id}">Edit</a></td>
+            <td><a href="#" th:href="@{/admin/post/delete/} + ${post.id}">Delete</a></td>
 
         </tr>
 
