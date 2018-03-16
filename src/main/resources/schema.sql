@@ -4,10 +4,6 @@ CREATE DATABASE  IF NOT EXISTS `xxxx`;
 USE `xxxx`;
 
 
-
-
-
-
 DROP TABLE IF EXISTS `post`;
 
 CREATE TABLE `post` (
@@ -20,3 +16,7 @@ CREATE TABLE `post` (
 
   PRIMARY KEY (`post_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+
+
+

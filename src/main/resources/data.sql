@@ -9,3 +9,11 @@ INSERT INTO post(post_id,author,title,body,posted_on) VALUES (2,'tad2','title2 s
 INSERT INTO post(post_id,author,title,body,posted_on) VALUES (3,'tad3','title3 third3 post','body 3..',CURRENT_TIMESTAMP);
 
 
+
+
+
+
+
+
+
+
