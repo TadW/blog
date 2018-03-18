@@ -64,7 +64,11 @@ public class AdminController {
     }
 
 
-
+    @RequestMapping("/sidebar")
+    public String home(Model model){
+        model.addAttribute("panel", "Panel 1");
+        return "sidebar";
+    }
 
 
 

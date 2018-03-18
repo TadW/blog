@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -33,6 +34,15 @@ public class PostService {
     public Post getPostById(Long id){
         return postRepository.findOne(id);
     }
+
+
+
+   /* public List<Post> findLatestPosts(){
+       return this.listPosts().stream()
+               .sorted((a, b) -> b.getPostedON().compareTo(a.getPostedON()))
+                .limit(3)
+                .collect(Collectors.toList());
+    } */
 
 
 }
