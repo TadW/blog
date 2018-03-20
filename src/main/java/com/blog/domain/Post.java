@@ -22,7 +22,7 @@ public class Post {
     private String title;
 
 
-    @Column(name = "body", columnDefinition = "TEXT")
+    @Column(name = "body",  length = 1000)
     private String body;
 
     @Column(name = "posted_on")
