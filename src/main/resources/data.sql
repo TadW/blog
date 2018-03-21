@@ -14,6 +14,14 @@ INSERT INTO post (post_id, author, title, body, posted_on) VALUES (3, 'JasonA', 
 
 
 
+INSERT INTO users (user_id, email, password,full_name) VALUES
+  (1, 'admin@admin', 'admin','ROLE_ADMIN');
+
+INSERT INTO roles (role_id, role) VALUES
+  (1, 'ROLE_ADMIN');
+
+INSERT INTO users_roles (user_id, role_id) VALUES
+  (1,1);
 
 
 
