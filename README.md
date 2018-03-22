@@ -4,6 +4,9 @@
 * Spring Data (Hibernate & MySQL)
 * Spring MVC (Tomcat)
 * Thymleaf
+Login details:
+admin@admin
+pass: admin
 
 ![](1.png)
 ![](2.png)
