@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
-
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -37,12 +34,7 @@ public class PostService {
 
 
 
-   /* public List<Post> findLatestPosts(){
-       return this.listPosts().stream()
-               .sorted((a, b) -> b.getPostedON().compareTo(a.getPostedON()))
-                .limit(3)
-                .collect(Collectors.toList());
-    } */
+
 
 
 }

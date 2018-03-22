@@ -14,6 +14,7 @@ public class Role {
     @Column(name = "role_id")
     private Long id;
 
+
     private String role;
 
     @ManyToMany( mappedBy = "roles")

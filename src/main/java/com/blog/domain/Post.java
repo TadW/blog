@@ -1,7 +1,5 @@
 package com.blog.domain;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 import javax.persistence.*;
 import java.util.Date;
 
@@ -24,6 +22,7 @@ public class Post {
 
     @Column(name = "body",  length = 1000)
     private String body;
+
 
     @Column(name = "posted_on")
     @Temporal(TemporalType.TIMESTAMP)
