@@ -41,7 +41,7 @@ public class AdminController {
     }
 
     @RequestMapping(value = "/admin/save", method = RequestMethod.POST)
-    public String postSave(Post post, BindingResult bindingResult, Model model) {
+    public String postSave(Post post) {
         Post savePost = postService.savePost(post);
         return "redirect:/admin/posts";
     }
